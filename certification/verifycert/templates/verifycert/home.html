@@ -1,0 +1,131 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel = "stylesheet" href="{% static 'css/1.css' %}">
+    <link rel = "stylesheet" href="{% static 'css/style.css' %}">
+
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Certificate Verification!</title>
+      
+</head>
+<body> 
+  <section class="nav-bar">
+  <div class="nav-container">
+    <div class="brand">
+      <a href="https://istenitdgp.com/"><img src="{% static 'img/logo.png' %}"></a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+        <li>
+          <a href="#">Home</a>
+            <li>
+          <a href="http://istenitdgp.com/blog.istenitdgp.com/">Blog Site</a>
+        </li>
+          <li><a href="https://www.facebook.com/istenitd/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.instagram.com/istenitdgp/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/iste-nit-durgapur/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.youtube.com/channel/UCA1jrMTZPxVbs_A8hDLXlbQ"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+ 
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script  src="{% static 'js/function.js' %}"></script>
+    </nav>  
+  
+    <div class="hero">
+      
+      <!--h1 class= "h">Enter Certificate Number Here:</h1><r><br><br></r-->
+      <h1 class="h">
+        <form action="" method="post" id="verify_form" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+          {% if not valid %}
+          <label for="inputCert">Enter Valid Certificate Number:</label><br><br>
+          {% else %}
+          <label for="inputCert">Enter The Certificate Number:</label><br><br>
+          {% endif %}
+      <input type="text" class="form-control" id="inputCert" placeholder="Certificate Number">
+    </div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>  
+</div>    
+   
+<!-- Footer -->
+      <div class="mt-5 pt-5 pb-5 footer d-flex justify-content-center text-center">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 col-xs-12 about-company">
+      <div style="display:inline-block">
+                            <a class="logo" href="index.html"><img src="logo.png" alt="Logo" height="80"></a>
+                            </div>
+                            <div style="display:inline-block">
+                            <a class="logo" href="index.html"><img src="nitdgp_logo.png" alt="Logo" height="80"></a>
+                            </div>
+                            <address>
+                                Mahatma Gandhi Avenue, NIT Durgapur <br>
+                                West Bengal, India
+                            </address>
+                            <ul class="list-unstyled lgx-address-info">
+                                <li><i class="fa fa-phone"></i>+91 9800 062 969</li>
+                                <li><i class="fa fa-envelope"></i> istenitdurgapur@gmail.com</li>
+                            </ul>
+    </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    <div class="col-lg-3 col-xs-12 links">
+      <h4 class="mt-lg-0 mt-sm-3" class="D">Other Related Links</h4>
+        <ul class="m-0 p-0">
+         <a href="https://nitdgp.ac.in/">NIT Durgapur</a><br>
+                                <a href="https://nitdgp.ac.in/clubs">Clubs</a><br>
+                                <a href="contact.html">Help Desk</a><br>
+                                <a href="contact.html">Locate us on Map</a><br>
+        </ul>
+    </div>
+      <br><br>
+    <div class="col-lg-4 col-xs-12 location">
+        <h4 class="mt-lg-0 mt-sm-3" class="D">Social Media Links</h4>
+      <a href="https://www.facebook.com/istenitd/"><i class="fa fa-facebook" aria-hidden="true"></i></a><br>
+                                    <a href="https://www.instagram.com/istenitdgp/"><i class="fa fa-instagram" aria-hidden="true"></i></a><br>
+                                    <a href="https://www.linkedin.com/company/iste-nit-durgapur/"><i class="fa fa-linkedin" aria-hidden="true"></i></a><br>
+                                    <a href="https://www.youtube.com/channel/UCA1jrMTZPxVbs_A8hDLXlbQ"><i class="fa fa-youtube-play" aria-hidden="true"></i></a><br>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col copyright">
+      <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
+    </div>
+  </div>
+</div>
+</div>
+<!-- Footer -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
