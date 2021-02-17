@@ -12,8 +12,9 @@ class Year(models.Model):
 
 class Events(models.Model):
     year = models.ForeignKey(Year, on_delete=models.CASCADE, null=True)
-    name = models.CharField(max_length=50)
-    date = models.DateField(auto_now_add=True,null = True)
+    name = models.CharField(max_length=50,null = True)
+    date = models.DateField(null = True)
+    image = models.ImageField(upload_to = 'certificates/', null=True,blank = True)
 
     submitted_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -28,7 +29,6 @@ class Certificate(models.Model):
     link = models.URLField(max_length=200, null=True,blank = True)
     email = models.EmailField(max_length=256, null=True,blank = True)
     rank = models.IntegerField(default=4,null=True,blank = True)
-    image = models.ImageField(upload_to = 'certificates/', null=True,blank = True)
 
     submitted_at = models.DateTimeField(auto_now_add=True ,null=True)
     updated_at = models.DateTimeField(auto_now=True ,null=True)

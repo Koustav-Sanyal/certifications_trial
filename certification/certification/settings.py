@@ -21,13 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'vm#cpp4q9x$j@!*f6#zk1$68$2b0rssr3&^rztf%ert(31p&5n'
+SECRET_KEY = 'Demo_Project'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -40,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'verifycert',
     'crispy_forms',
+    'cit',
+    'RuntimeTerror',
+    'Recadathon',
 ]
 
 MIDDLEWARE = [

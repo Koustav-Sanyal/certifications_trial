@@ -18,9 +18,22 @@ from django.conf import settings
 from django.conf.urls.static import static
 from . import views
 
+app_name='verifycert'
+
 urlpatterns = [
     path('', views.home, name='home'),
-    path('<str:cert_id>', views.certificate, name='certificate')
+    
+    path('CIT/', include('cit.urls')),
+    path('RT/', include('RuntimeTerror.urls')),
+    path('RC/', include('Recadathon.urls')),
+
+    path('cit/', include('cit.urls')),
+    path('rt/', include('RuntimeTerror.urls')),
+    path('rc/', include('Recadathon.urls')),
+    
+    path('<str:cert_id>', views.error, name='error'),
+    path('invalid/', views.invalid, name='invalid'),
+
 ]
 urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -56,19 +56,9 @@
 
 <div class="center">
   
-  {% if not invalid %}
   <label><strong>ISTE NIT Durgapur Certificate Validation</strong> </label><br>
-  {% else %}
-  <label><strong>ISTE NIT Durgapur Certificate Validation</strong> </label><br>
-    <label style="color: crimson;">Enter Valid Certificate Number</label><br>
-  {% endif %}
-
-  <form action="" method="post" id="verify_form" enctype="multipart/form-data">
-  {% csrf_token %}
-  {{form|crispy}} 
-  <br>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+  <label style="color: crimson;">In-Valid Certificate Number</label><br>
+  <button><a href="{{'/verify/'}}">Go Back</a></button>
 </div>
   
 
