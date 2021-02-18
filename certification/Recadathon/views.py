@@ -17,16 +17,16 @@ import mimetypes
 
 def rd2020(request, cert_id):
     if(cert_id == "123456" or cert_id == "789456" or cert_id == "512456"):
-        img_path = os.path.join(BASE_DIR, "rd/static/rd2020/" + cert_id + ".png")
+        img_path = os.path.join(BASE_DIR, "rd/data/rd2020/" + cert_id + ".png")
         img = open(img_path, 'rb')
         response =HttpResponse(img, content_type='image/png')
         response['Content-Disposition'] = 'attachment; filename="ISTE_certificate.jpg"'
         return response    
 
     try:
-        file_path = os.path.join(BASE_DIR, 'rd/static/rd2020/rd2020.csv')
-        image_path = os.path.join(BASE_DIR, 'rd/static/rd2020/rd2020.png')
-        save_path = os.path.join(BASE_DIR, 'rd/static/rd2020/rd2020_all/')
+        file_path = os.path.join(BASE_DIR, 'rd/data/rd2020/rd2020.csv')
+        image_path = os.path.join(BASE_DIR, 'rd/data/rd2020/rd2020.png')
+        save_path = os.path.join(BASE_DIR, 'rd/data/rd2020/rd2020_all/')
         df = pd.read_csv(file_path)
         font = ImageFont.truetype('arial.ttf',60)
         for index,j in df.iterrows():

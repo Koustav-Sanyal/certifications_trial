@@ -1,0 +1,82 @@
+.footer{
+  background: #152F4F;
+  color:white;
+  
+    .D{
+        color: black;
+        
+    }
+  .links{
+    ul {list-style-type: none;}
+    li a{
+      color: white;
+      transition: color .2s;
+      &:hover{
+        text-decoration:none;
+        color:#4180CB;
+        }
+    }
+  }  
+  .about-company{
+    i{font-size: 25px;}
+    a{
+      color:white;
+      transition: color .2s;
+      &:hover{color:#4180CB}
+    }
+  } 
+  .location{
+    i{font-size: 18px;}
+  }
+  .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+}
+
+
+.hero {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {    
+      content: "";
+      background-image: url(../img/Back.jpg);
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.50;
+}
+@media screen and (max-width: 599px){
+.h {
+  position: relative;
+  color: #ffffff;  
+  font-size: 50px;
+  line-height: 0.9;
+  text-align: center;
+    }}
+
+@media screen and (min-width: 600px){
+.h {
+  position: relative;
+  color: #ffffff;  
+  font-size: 60px;
+  line-height: 0.9;
+  text-align: center;
+    }}
+
+@media screen and (min-width: 800px){
+.h {
+  position: relative;
+  color: #ffffff;  
+  font-size: 80px;
+  line-height: 0.9;
+  text-align: center;
+}
+}
+
