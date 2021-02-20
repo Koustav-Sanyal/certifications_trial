@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    path('2020/<str:cert_id>', views.cit2020, name='cit2020'),
+    path('20/<str:cert_id>', views.cit2020, name='cit2020'),
 ]
 urlpatterns += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

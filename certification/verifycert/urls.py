@@ -24,12 +24,12 @@ urlpatterns = [
     path('', views.home, name='home'),
     
     path('CIT/', include('cit.urls')),
-    path('RT/', include('RuntimeTerror.urls')),
-    path('RC/', include('Recadathon.urls')),
+    # path('RT/', include('RuntimeTerror.urls')),
+    # path('RC/', include('Recadathon.urls')),
 
     path('cit/', include('cit.urls')),
-    path('rt/', include('RuntimeTerror.urls')),
-    path('rc/', include('Recadathon.urls')),
+    # path('rt/', include('RuntimeTerror.urls')),
+    # path('rc/', include('Recadathon.urls')),
     
     path('<str:cert_id>', views.error, name='error'),
     path('invalid/', views.invalid, name='invalid'),
