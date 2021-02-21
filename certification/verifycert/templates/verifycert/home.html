@@ -21,13 +21,14 @@
         margin-top: 20vh;
         margin-bottom: 20vh;
         width: 60%;
-        border: 3px solid #2281da;
         text-align: center;
         padding: 10px;
+        color: white;
       }
       </style> 
 </head>
-<body style="background-color: antiquewhite;"> 
+<body style="background-color: #265896;"> 
+  
   <section class="nav-bar">
   <div class="nav-container">
     <div class="brand">
@@ -38,7 +39,7 @@
       <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
       <ul class="nav-list">
         <li>
-          <a href="{% url 'verifycert:home'%}">Home</a>
+          <a href="https://istenitdgp.com/">Home</a>
             <li>
           <a href="http://istenitdgp.com/blog.istenitdgp.com/">Blog Site</a>
         </li>
@@ -54,14 +55,12 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script  src="{% static 'js/function.js' %}"></script>
     </nav> 
-
-<div class="center">
-  
+<div class="center" >  
   {% if not invalid %}
-  <label><strong>ISTE NIT Durgapur Certificate Validation</strong> </label><br>
+  <h4><strong>ISTE NIT Durgapur Certificate Validation</strong> </h4><br>
   {% else %}
-  <label><strong>ISTE NIT Durgapur Certificate Validation</strong> </label><br>
-    <label style="color: crimson;">Enter Valid Certificate Number</label><br>
+  <h4><strong>ISTE NIT Durgapur Certificate Validation</strong> </h4><br>
+    <h4 style="color: crimson;">Enter Valid Certificate Number</h4><br>
   {% endif %}
 
   <form action="" method="post" id="verify_form" enctype="multipart/form-data">
@@ -71,13 +70,13 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
-  
-
+<!-- <hr style="border: 2px solid black;"> -->
    
 <!-- Footer -->
 <div class="mt-5 pt-5 pb-5 footer d-flex justify-content-center text-center">
 <div class="container">
   <div class="row">
+    
     <div class="col-lg-5 col-xs-12 about-company">
       <div style="display:inline-block">
         <a class="logo" href="index.html"><img src="{% static 'img/iste_new_logo.jpg' %}" alt="Logo" height="80" style="border-radius: 50%;"></a>

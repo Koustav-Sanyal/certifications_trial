@@ -26,7 +26,7 @@ SECRET_KEY = 'Demo_Project'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'istenitdgp.com/verify']
 
 # Application definition
 
